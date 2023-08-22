@@ -1,0 +1,12 @@
+defaults:
+  - task: bwe
+  - model: diffwave
+  - diffusion: gaussian_diffusion
+  - _self_
+
+output_dir: results
+audio_dir: ???
+use_ema: false
+segment_size: null
+sampling_rate: 16000
+device: cuda

@@ -1,0 +1,13 @@
+_target_: improved_diffusion.script_util.create_gaussian_diffusion
+learn_sigma: false
+sigma_small: true
+steps: 200
+noise_schedule: linear
+timestep_respacing: ''
+use_kl: false
+use_l1: false
+predict_xstart: false
+rescale_timesteps: false
+rescale_learned_sigmas: false
+input_sigma_t: true
+#schedule_sampler: uniform

@@ -1,0 +1,34 @@
+model:
+  _target_: ffc_se_models.FFCSE
+  model_params:
+    mode: ae
+    special_estimate: null
+    out_channels: 256
+    scale_factor: 1
+    block_depth:
+    - 18
+    use_connection: null
+    fu_kernel: 1
+    ffc_conv_kernel: 3
+    ffc_global_ratio_in:
+    - 0.75
+    ffc_global_ratio_out:
+    - 0.75
+    fft_norm: ortho
+    use_only_freq: true
+    stride:
+    - 2
+    - 2
+    padding_type: reflect
+    bias: false
+    use_film: false
+    embedding_mode: sigma
+  stft_params:
+    n_fft: 1024
+    hop_length: 256
+    win_length: 1024
+    return_complex: false
+    center: true
+    window: hann_window
+
+ckpt_path: weights/ffc_ae.ckpt

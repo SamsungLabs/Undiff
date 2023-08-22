@@ -1,0 +1,14 @@
+model:
+  _target_: improved_diffusion.DiffWave
+  residual_layers: 48
+  residual_channels: 256
+  noise_schedule_len: 200
+  n_mels: 80
+  use_film: False
+  kernel_size: 3
+  attention: 'se_skip'
+  embedding_type: 'sigma'
+  dilation_cycle_length: 12
+  se_num: 16
+
+ckpt_path: weights/diffwave.ckpt

@@ -1,0 +1,17 @@
+name:
+  _target_: improved_diffusion.tasks.BWETask
+
+
+
+metrics:
+  wv-mos:
+    _target_: improved_diffusion.MOSNet
+    weights_path: weights/wave2vec2mos.pth
+    pretrained_path: weights/fb_w2v2_pretrained
+    sr: 16000
+    num_splits: 4
+    device: cuda
+  lsd:
+    _target_: improved_diffusion.LSD
+    sampling_rate: 16000
+
